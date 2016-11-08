@@ -4,8 +4,8 @@
    "authentication": "import(auth_config.json)",
    "exports": {
       "now": "date-increment-interpolator({\"origin\": \"now\", \"increment\": 0})",
-      "workDaysSchedule": "48 */15 * * * 1-5",
-      "weekendSchedule": "48 */15 * * * 0,6",
+      "workDaysSchedule": "29 */15 * * * 1-5",
+      "weekendSchedule": "29 */15 * * * 0,6",
       "so2_value_lv": "time-random-linear-interpolator([[0,random(5,10)],[9,random(10,15)],[12,random(60,70)],[14,random(40,50)],[18,random(10,15)],[24,random(5,10)]])",
       "so2_value_sd": "time-random-linear-interpolator([[0,random(4,8)],[9,random(8,12)],[12,random(40,50)],[14,random(30,40)],[18,random(8,12)],[24,random(4,8)]])",
       "no2_value_lv": [
@@ -45,13 +45,13 @@
             "condition": "${{entity_name==^((aq_alcala_zamora|aq_distrito_telefonica)$).*}}"
          }
       ],
-      "springSchedule": "34 */15 * * 4,5 *",
-      "summerSchedule": "34 */15 * * 6-9 *",
-      "autumnSchedule": "34 */15 * * 10,11 *",
-      "winterSchedule": "34 */15 * * 1-3,12 *",
-      "notRainSummerSchedule": "34 */15 * * 6-9 *",
-      "notRainNotSummerSchedule": "34 */15 * 1-4,7-22,25-31 1-5,10-12 *",
-      "rainSchedule": "34 */15 * 5,6,23,24 1-5,10-12 *",
+      "springSchedule": "3 */15 * * 4,5 *",
+      "summerSchedule": "3 */15 * * 6-9 *",
+      "autumnSchedule": "3 */15 * * 10,11 *",
+      "winterSchedule": "3 */15 * * 1-3,12 *",
+      "notRainSummerSchedule": "3 */15 * * 6-9 *",
+      "notRainNotSummerSchedule": "3 */15 * 1-4,7-22,25-31 1-5,10-12 *",
+      "rainSchedule": "3 */15 * 5,6,23,24 1-5,10-12 *",
       "precip_value_nrsu": "0",
       "precip_value_r": "time-random-linear-interpolator([[0,random(0.25,0.40)],[6,random(0.25,0.4)],[7,random(0,0)],[17,random(0,0)],[18,random(0.3,0.4)],[24,random(0.33,0.45)]])",
       "precip_value_nrnsu": "0",
@@ -65,10 +65,10 @@
       "vbsl_value_nrsu": "text-rotation-interpolator({\"units\": \"hours\", \"text\": [[0,\"poor\"],[6.5,\"good\"],[21,\"poor\"]]})",
       "vbsl_value_nrnsu": "text-rotation-interpolator({\"units\": \"hours\", \"text\": [[0,\"poor\"],[8,\"good\"],[19,\"poor\"]]})",
       "vbsl_value_r": "text-rotation-interpolator({\"units\": \"hours\", \"text\": [[0,\"veryPoor\"],[2,\"veryPoor\"],[7,\"moderate\"],[18,\"veryPoor\"],[21,\"veryPoor\"]]})",
-      "workDaysReducedSchedule": "17 */15 * * * 1-4",
-      "fridaysSchedule": "17 */15 * * * 5",
-      "saturdaysSchedule": "17 */15 * * * 6",
-      "sundaysSchedule": "17 */15 * * * 0",
+      "workDaysReducedSchedule": "54 */15 * * * 1-4",
+      "fridaysSchedule": "54 */15 * * * 5",
+      "saturdaysSchedule": "54 */15 * * * 6",
+      "sundaysSchedule": "54 */15 * * * 0",
       "soundlv_value_lj": [
          {
             "content": "time-random-linear-interpolator([[0,random(52,55)],[5,random(45,48)],[6,random(58,65)],[9,random(62,68)],[12,random(64,66)],[14,random(65,70)],[16,random(55,58)],[18,random(64,68)],[21,random(58,60)],[24,random(54,58)]])",
@@ -109,7 +109,7 @@
       {
          "entity_name": "aq_jaen",
          "entity_type": "AirQualityObserved",
-         "schedule": "2 */15 * * * *",
+         "schedule": "39 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -230,7 +230,7 @@
       {
          "entity_name": "aq_uam",
          "entity_type": "AirQualityObserved",
-         "schedule": "53 */15 * * * *",
+         "schedule": "11 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -351,7 +351,7 @@
       {
          "entity_name": "aq_alonso_quijano",
          "entity_type": "AirQualityObserved",
-         "schedule": "25 */15 * * * *",
+         "schedule": "37 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -472,7 +472,7 @@
       {
          "entity_name": "aq_alcala_zamora",
          "entity_type": "AirQualityObserved",
-         "schedule": "51 */15 * * * *",
+         "schedule": "5 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -593,7 +593,7 @@
       {
          "entity_name": "aq_camino_del_sur",
          "entity_type": "AirQualityObserved",
-         "schedule": "24 */15 * * * *",
+         "schedule": "29 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -714,7 +714,7 @@
       {
          "entity_name": "aq_salvia",
          "entity_type": "AirQualityObserved",
-         "schedule": "1 */15 * * * *",
+         "schedule": "42 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -835,7 +835,7 @@
       {
          "entity_name": "aq_distrito_telefonica",
          "entity_type": "AirQualityObserved",
-         "schedule": "11 */15 * * * *",
+         "schedule": "19 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -956,7 +956,7 @@
       {
          "entity_name": "aq_nevero",
          "entity_type": "AirQualityObserved",
-         "schedule": "34 */15 * * * *",
+         "schedule": "15 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -1077,7 +1077,7 @@
       {
          "entity_name": "aq_aragoneses",
          "entity_type": "AirQualityObserved",
-         "schedule": "36 */15 * * * *",
+         "schedule": "9 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -1198,7 +1198,7 @@
       {
          "entity_name": "aq_ciudad_escolar",
          "entity_type": "AirQualityObserved",
-         "schedule": "48 */15 * * * *",
+         "schedule": "29 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -1319,7 +1319,7 @@
       {
          "entity_name": "wo_monasterio",
          "entity_type": "WeatherObserved",
-         "schedule": "29 */15 * * * *",
+         "schedule": "37 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1451,7 +1451,7 @@
       {
          "entity_name": "wo_dt",
          "entity_type": "WeatherObserved",
-         "schedule": "59 */15 * * * *",
+         "schedule": "58 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1583,7 +1583,7 @@
       {
          "entity_name": "wo_puente_reina",
          "entity_type": "WeatherObserved",
-         "schedule": "27 */15 * * * *",
+         "schedule": "7 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1715,7 +1715,7 @@
       {
          "entity_name": "wo_reyes_catolicos",
          "entity_type": "WeatherObserved",
-         "schedule": "41 */15 * * * *",
+         "schedule": "28 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1847,7 +1847,7 @@
       {
          "entity_name": "wo_camino_nuevo",
          "entity_type": "WeatherObserved",
-         "schedule": "14 */15 * * * *",
+         "schedule": "29 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1979,7 +1979,7 @@
       {
          "entity_name": "wo_uam",
          "entity_type": "WeatherObserved",
-         "schedule": "50 */15 * * * *",
+         "schedule": "58 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2109,9 +2109,9 @@
          ]
       },
       {
-         "entity_name": "wo_el_pardo",
+         "entity_name": "wo_el_pardo_01",
          "entity_type": "WeatherObserved",
-         "schedule": "16 */15 * * * *",
+         "schedule": "41 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2241,9 +2241,9 @@
          ]
       },
       {
-         "entity_name": "wo_arroyofresno",
+         "entity_name": "wo_rosalia_de_castro",
          "entity_type": "WeatherObserved",
-         "schedule": "42 */15 * * * *",
+         "schedule": "54 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2340,8 +2340,8 @@
                "value": {
                   "type": "Point",
                   "coordinates": [
-                     -3.74445486375369,
-                     40.472724242200044
+                     -3.730880034090993,
+                     40.483710570754496
                   ]
                },
                "type": "geo:json"
@@ -2375,7 +2375,7 @@
       {
          "entity_name": "wo_almenara",
          "entity_type": "WeatherObserved",
-         "schedule": "13 */15 * * * *",
+         "schedule": "3 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2507,7 +2507,7 @@
       {
          "entity_name": "wo_ctra_burgos",
          "entity_type": "WeatherObserved",
-         "schedule": "29 */15 * * * *",
+         "schedule": "39 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2639,7 +2639,7 @@
       {
          "entity_name": "wo_el_alto",
          "entity_type": "WeatherObserved",
-         "schedule": "34 */15 * * * *",
+         "schedule": "36 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2771,7 +2771,7 @@
       {
          "entity_name": "wo_ariadna",
          "entity_type": "WeatherObserved",
-         "schedule": "34 */15 * * * *",
+         "schedule": "2 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2901,6 +2901,402 @@
          ]
       },
       {
+         "entity_name": "wo_valconejero",
+         "entity_type": "WeatherObserved",
+         "schedule": "19 */15 * * * *",
+         "active": [
+            {
+               "name": "precipitation",
+               "type": "Number",
+               "value": "import(precip_value_nrsu)",
+               "schedule": "import(notRainSummerSchedule)"
+            },
+            {
+               "name": "precipitation",
+               "type": "Number",
+               "value": "import(precip_value_r)",
+               "schedule": "import(rainSchedule)"
+            },
+            {
+               "name": "precipitation",
+               "type": "Number",
+               "value": "import(precip_value_nrnsu)",
+               "schedule": "import(notRainNotSummerSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_sp)",
+               "schedule": "import(springSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_su)",
+               "schedule": "import(summerSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_au)",
+               "schedule": "import(autumnSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_wi)",
+               "schedule": "import(winterSchedule)"
+            },
+            {
+               "name": "weatherType",
+               "type": "Text",
+               "value": "import(wttype_value_nrsu)",
+               "schedule": "import(notRainSummerSchedule)"
+            },
+            {
+               "name": "weatherType",
+               "type": "Text",
+               "value": "import(wttype_value_nrnsu)",
+               "schedule": "import(notRainNotSummerSchedule)"
+            },
+            {
+               "name": "weatherType",
+               "type": "Text",
+               "value": "import(wttype_value_r)",
+               "schedule": "import(rainSchedule)"
+            },
+            {
+               "name": "visibility",
+               "type": "Text",
+               "value": "import(vbsl_value_nrsu)",
+               "schedule": "import(notRainSummerSchedule)"
+            },
+            {
+               "name": "visibility",
+               "type": "Text",
+               "value": "import(vbsl_value_nrnsu)",
+               "schedule": "import(notRainNotSummerSchedule)"
+            },
+            {
+               "name": "visibility",
+               "type": "Text",
+               "value": "import(vbsl_value_r)",
+               "schedule": "import(rainSchedule)"
+            },
+            {
+               "name": "dateObserved",
+               "value": "import(now)",
+               "type": "DateTime"
+            },
+            {
+               "name": "dateModified",
+               "value": "import(now)",
+               "type": "DateTime"
+            }
+         ],
+         "staticAttributes": [
+            {
+               "name": "location",
+               "value": {
+                  "type": "Point",
+                  "coordinates": [
+                     -3.635851920234127,
+                     40.56431764883044
+                  ]
+               },
+               "type": "geo:json"
+            },
+            {
+               "name": "source",
+               "type": "URL",
+               "value": "http://urbo.geographica.io/"
+            },
+            {
+               "name": "dataProvider",
+               "type": "Text",
+               "value": "urbo"
+            },
+            {
+               "name": "address",
+               "type": "address",
+               "value": {
+                  "addressCountry": "ES",
+                  "addressLocality": "Madrid",
+                  "streetAddress": "nombre de calle s/n"
+               }
+            },
+            {
+               "name": "refPointOfInterest",
+               "type": "Text",
+               "value": "DistritoTelefonicaStations"
+            }
+         ]
+      },
+      {
+         "entity_name": "wo_el_pardo_02",
+         "entity_type": "WeatherObserved",
+         "schedule": "56 */15 * * * *",
+         "active": [
+            {
+               "name": "precipitation",
+               "type": "Number",
+               "value": "import(precip_value_nrsu)",
+               "schedule": "import(notRainSummerSchedule)"
+            },
+            {
+               "name": "precipitation",
+               "type": "Number",
+               "value": "import(precip_value_r)",
+               "schedule": "import(rainSchedule)"
+            },
+            {
+               "name": "precipitation",
+               "type": "Number",
+               "value": "import(precip_value_nrnsu)",
+               "schedule": "import(notRainNotSummerSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_sp)",
+               "schedule": "import(springSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_su)",
+               "schedule": "import(summerSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_au)",
+               "schedule": "import(autumnSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_wi)",
+               "schedule": "import(winterSchedule)"
+            },
+            {
+               "name": "weatherType",
+               "type": "Text",
+               "value": "import(wttype_value_nrsu)",
+               "schedule": "import(notRainSummerSchedule)"
+            },
+            {
+               "name": "weatherType",
+               "type": "Text",
+               "value": "import(wttype_value_nrnsu)",
+               "schedule": "import(notRainNotSummerSchedule)"
+            },
+            {
+               "name": "weatherType",
+               "type": "Text",
+               "value": "import(wttype_value_r)",
+               "schedule": "import(rainSchedule)"
+            },
+            {
+               "name": "visibility",
+               "type": "Text",
+               "value": "import(vbsl_value_nrsu)",
+               "schedule": "import(notRainSummerSchedule)"
+            },
+            {
+               "name": "visibility",
+               "type": "Text",
+               "value": "import(vbsl_value_nrnsu)",
+               "schedule": "import(notRainNotSummerSchedule)"
+            },
+            {
+               "name": "visibility",
+               "type": "Text",
+               "value": "import(vbsl_value_r)",
+               "schedule": "import(rainSchedule)"
+            },
+            {
+               "name": "dateObserved",
+               "value": "import(now)",
+               "type": "DateTime"
+            },
+            {
+               "name": "dateModified",
+               "value": "import(now)",
+               "type": "DateTime"
+            }
+         ],
+         "staticAttributes": [
+            {
+               "name": "location",
+               "value": {
+                  "type": "Point",
+                  "coordinates": [
+                     -3.734069286108744,
+                     40.5515771522754
+                  ]
+               },
+               "type": "geo:json"
+            },
+            {
+               "name": "source",
+               "type": "URL",
+               "value": "http://urbo.geographica.io/"
+            },
+            {
+               "name": "dataProvider",
+               "type": "Text",
+               "value": "urbo"
+            },
+            {
+               "name": "address",
+               "type": "address",
+               "value": {
+                  "addressCountry": "ES",
+                  "addressLocality": "Madrid",
+                  "streetAddress": "nombre de calle s/n"
+               }
+            },
+            {
+               "name": "refPointOfInterest",
+               "type": "Text",
+               "value": "DistritoTelefonicaStations"
+            }
+         ]
+      },
+      {
+         "entity_name": "wo_monovar",
+         "entity_type": "WeatherObserved",
+         "schedule": "3 */15 * * * *",
+         "active": [
+            {
+               "name": "precipitation",
+               "type": "Number",
+               "value": "import(precip_value_nrsu)",
+               "schedule": "import(notRainSummerSchedule)"
+            },
+            {
+               "name": "precipitation",
+               "type": "Number",
+               "value": "import(precip_value_r)",
+               "schedule": "import(rainSchedule)"
+            },
+            {
+               "name": "precipitation",
+               "type": "Number",
+               "value": "import(precip_value_nrnsu)",
+               "schedule": "import(notRainNotSummerSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_sp)",
+               "schedule": "import(springSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_su)",
+               "schedule": "import(summerSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_au)",
+               "schedule": "import(autumnSchedule)"
+            },
+            {
+               "name": "temperature",
+               "type": "Number",
+               "value": "import(temp_value_wi)",
+               "schedule": "import(winterSchedule)"
+            },
+            {
+               "name": "weatherType",
+               "type": "Text",
+               "value": "import(wttype_value_nrsu)",
+               "schedule": "import(notRainSummerSchedule)"
+            },
+            {
+               "name": "weatherType",
+               "type": "Text",
+               "value": "import(wttype_value_nrnsu)",
+               "schedule": "import(notRainNotSummerSchedule)"
+            },
+            {
+               "name": "weatherType",
+               "type": "Text",
+               "value": "import(wttype_value_r)",
+               "schedule": "import(rainSchedule)"
+            },
+            {
+               "name": "visibility",
+               "type": "Text",
+               "value": "import(vbsl_value_nrsu)",
+               "schedule": "import(notRainSummerSchedule)"
+            },
+            {
+               "name": "visibility",
+               "type": "Text",
+               "value": "import(vbsl_value_nrnsu)",
+               "schedule": "import(notRainNotSummerSchedule)"
+            },
+            {
+               "name": "visibility",
+               "type": "Text",
+               "value": "import(vbsl_value_r)",
+               "schedule": "import(rainSchedule)"
+            },
+            {
+               "name": "dateObserved",
+               "value": "import(now)",
+               "type": "DateTime"
+            },
+            {
+               "name": "dateModified",
+               "value": "import(now)",
+               "type": "DateTime"
+            }
+         ],
+         "staticAttributes": [
+            {
+               "name": "location",
+               "value": {
+                  "type": "Point",
+                  "coordinates": [
+                     -3.656449279367523,
+                     40.47724730570977
+                  ]
+               },
+               "type": "geo:json"
+            },
+            {
+               "name": "source",
+               "type": "URL",
+               "value": "http://urbo.geographica.io/"
+            },
+            {
+               "name": "dataProvider",
+               "type": "Text",
+               "value": "urbo"
+            },
+            {
+               "name": "address",
+               "type": "address",
+               "value": {
+                  "addressCountry": "ES",
+                  "addressLocality": "Madrid",
+                  "streetAddress": "nombre de calle s/n"
+               }
+            },
+            {
+               "name": "refPointOfInterest",
+               "type": "Text",
+               "value": "DistritoTelefonicaStations"
+            }
+         ]
+      },
+      {
          "entity_name": "wa_ariadna",
          "entity_type": "WeatherArea",
          "schedule": "once",
@@ -2920,28 +3316,36 @@
                      [
                         [
                            [
-                              -3.6487595303969,
-                              40.41630881129907
+                              -3.634606021826135,
+                              40.46166613641176
                            ],
                            [
-                              -3.641133206077982,
-                              40.486817054018715
+                              -3.632339007885719,
+                              40.49216301017312
                            ],
                            [
                               -3.617180888459423,
                               40.50137756732371
                            ],
                            [
-                              -3.557128844502794,
-                              40.47630077482002
+                              -3.58845151625995,
+                              40.48938063170021
                            ],
                            [
-                              -3.557128844502794,
-                              40.41630881129907
+                              -3.588921933066858,
+                              40.48745334610465
                            ],
                            [
-                              -3.6487595303969,
-                              40.41630881129907
+                              -3.598781081601882,
+                              40.47031207135167
+                           ],
+                           [
+                              -3.613921916852096,
+                              40.46147186716867
+                           ],
+                           [
+                              -3.634606021826135,
+                              40.46166613641176
                            ]
                         ]
                      ]
@@ -2951,8 +3355,7 @@
             },
             {
                "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_ariadna"
+               "type": "Text"
             }
          ]
       },
@@ -2976,12 +3379,12 @@
                      [
                         [
                            [
-                              -3.701813673318954,
-                              40.41630881129907
+                              -3.69456963946923,
+                              40.47005718577704
                            ],
                            [
-                              -3.699596654275976,
-                              40.465614317835616
+                              -3.6958369126485,
+                              40.47468181291798
                            ],
                            [
                               -3.680143880572177,
@@ -2992,16 +3395,12 @@
                               40.5041493070001
                            ],
                            [
-                              -3.641133206077982,
-                              40.486817054018715
+                              -3.648293943702253,
+                              40.497828062761236
                            ],
                            [
-                              -3.6487595303969,
-                              40.41630881129907
-                           ],
-                           [
-                              -3.701813673318954,
-                              40.41630881129907
+                              -3.69456963946923,
+                              40.47005718577704
                            ]
                         ]
                      ]
@@ -3011,13 +3410,12 @@
             },
             {
                "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_puente_reina"
+               "type": "Text"
             }
          ]
       },
       {
-         "entity_name": "wa_el_pardo",
+         "entity_name": "wa_el_pardo_01",
          "entity_type": "WeatherArea",
          "schedule": "once",
          "active": [
@@ -3036,28 +3434,32 @@
                      [
                         [
                            [
-                              -3.812968418063883,
-                              40.48772053649365
+                              -3.768857628283433,
+                              40.56235442426143
                            ],
                            [
-                              -3.812968418063883,
-                              40.59687616168193
+                              -3.742375563446283,
+                              40.5171785886919
                            ],
                            [
-                              -3.737769865232943,
-                              40.55415577472348
+                              -3.776362554111222,
+                              40.48789515121269
                            ],
                            [
-                              -3.733498266472473,
-                              40.53603645661743
+                              -3.777654205023021,
+                              40.48906011772362
                            ],
                            [
-                              -3.737057935310197,
-                              40.51344662612928
+                              -3.784696453976609,
+                              40.523596402376405
                            ],
                            [
-                              -3.812968418063883,
-                              40.48772053649365
+                              -3.775541530336945,
+                              40.555172157341914
+                           ],
+                           [
+                              -3.768857628283433,
+                              40.56235442426143
                            ]
                         ]
                      ]
@@ -3067,8 +3469,7 @@
             },
             {
                "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_el_pardo"
+               "type": "Text"
             }
          ]
       },
@@ -3092,16 +3493,16 @@
                      [
                         [
                            [
-                              -3.699596654275976,
-                              40.465614317835616
+                              -3.6958369126485,
+                              40.47468181291798
                            ],
                            [
-                              -3.737057935310197,
-                              40.51344662612928
+                              -3.729170064410446,
+                              40.51779915427073
                            ],
                            [
-                              -3.733498266472473,
-                              40.53603645661743
+                              -3.71399968300745,
+                              40.53207956142201
                            ],
                            [
                               -3.682905858156074,
@@ -3112,8 +3513,8 @@
                               40.512529225128304
                            ],
                            [
-                              -3.699596654275976,
-                              40.465614317835616
+                              -3.6958369126485,
+                              40.47468181291798
                            ]
                         ]
                      ]
@@ -3123,8 +3524,74 @@
             },
             {
                "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_monasterio"
+               "type": "Text"
+            }
+         ]
+      },
+      {
+         "entity_name": "wa_rosalia_de_castro",
+         "entity_type": "WeatherArea",
+         "schedule": "once",
+         "active": [
+            {
+               "name": "dateModified",
+               "value": "import(now)",
+               "type": "DateTime"
+            }
+         ],
+         "staticAttributes": [
+            {
+               "name": "location",
+               "value": {
+                  "type": "MultiPolygon",
+                  "coordinates": [
+                     [
+                        [
+                           [
+                              -3.776362554111222,
+                              40.48789515121269
+                           ],
+                           [
+                              -3.742375563446283,
+                              40.5171785886919
+                           ],
+                           [
+                              -3.729170064410446,
+                              40.51779915427073
+                           ],
+                           [
+                              -3.6958369126485,
+                              40.47468181291798
+                           ],
+                           [
+                              -3.69456963946923,
+                              40.47005718577704
+                           ],
+                           [
+                              -3.694499530641508,
+                              40.462195052719316
+                           ],
+                           [
+                              -3.703710591010345,
+                              40.462275616795694
+                           ],
+                           [
+                              -3.753006333685462,
+                              40.4668296958569
+                           ],
+                           [
+                              -3.776362554111222,
+                              40.48789515121269
+                           ]
+                        ]
+                     ]
+                  ]
+               },
+               "type": "geo:json"
+            },
+            {
+               "name": "refWeatherStation",
+               "type": "Text"
             }
          ]
       },
@@ -3148,24 +3615,40 @@
                      [
                         [
                            [
-                              -3.557128844502794,
-                              40.47630077482002
+                              -3.58845151625995,
+                              40.48938063170021
                            ],
                            [
                               -3.617180888459423,
                               40.50137756732371
                            ],
                            [
-                              -3.617437701999576,
-                              40.542244818102176
+                              -3.617416729280212,
+                              40.53890738744621
                            ],
                            [
-                              -3.557128844502794,
-                              40.55108286201675
+                              -3.613270171386603,
+                              40.54285555456945
                            ],
                            [
-                              -3.557128844502794,
-                              40.47630077482002
+                              -3.583036128627153,
+                              40.547286243670754
+                           ],
+                           [
+                              -3.582100856479981,
+                              40.54053197738018
+                           ],
+                           [
+                              -3.582538747967217,
+                              40.51830832905636
+                           ],
+                           [
+                              -3.58508931414053,
+                              40.50315548757046
+                           ],
+                           [
+                              -3.58845151625995,
+                              40.48938063170021
                            ]
                         ]
                      ]
@@ -3175,8 +3658,7 @@
             },
             {
                "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_el_alto"
+               "type": "Text"
             }
          ]
       },
@@ -3200,32 +3682,36 @@
                      [
                         [
                            [
-                              -3.737769865232943,
-                              40.55415577472348
+                              -3.70905509521184,
+                              40.56361094050406
                            ],
                            [
-                              -3.812968418063883,
-                              40.59687616168193
+                              -3.758090871413507,
+                              40.573923971672244
                            ],
                            [
-                              -3.812968418063883,
-                              40.64620985119925
+                              -3.746668309627233,
+                              40.586198222102134
                            ],
                            [
-                              -3.640059465844864,
-                              40.64620985119925
+                              -3.717131482020309,
+                              40.59794240954445
                            ],
                            [
-                              -3.650764617360756,
-                              40.589719919979906
+                              -3.6746838945975,
+                              40.59691752585408
                            ],
                            [
-                              -3.6614306366499,
-                              40.57929266634
+                              -3.663172992562162,
+                              40.595251333398664
                            ],
                            [
-                              -3.737769865232943,
-                              40.55415577472348
+                              -3.670559112638651,
+                              40.57628685247717
+                           ],
+                           [
+                              -3.70905509521184,
+                              40.56361094050406
                            ]
                         ]
                      ]
@@ -3235,8 +3721,70 @@
             },
             {
                "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_almenara"
+               "type": "Text"
+            }
+         ]
+      },
+      {
+         "entity_name": "wa_el_pardo_02",
+         "entity_type": "WeatherArea",
+         "schedule": "once",
+         "active": [
+            {
+               "name": "dateModified",
+               "value": "import(now)",
+               "type": "DateTime"
+            }
+         ],
+         "staticAttributes": [
+            {
+               "name": "location",
+               "value": {
+                  "type": "MultiPolygon",
+                  "coordinates": [
+                     [
+                        [
+                           [
+                              -3.742375563446283,
+                              40.5171785886919
+                           ],
+                           [
+                              -3.775466382574229,
+                              40.55525290826943
+                           ],
+                           [
+                              -3.746668309627233,
+                              40.586198222102134
+                           ],
+                           [
+                              -3.745058019929976,
+                              40.586838492082805
+                           ],
+                           [
+                              -3.70905509521184,
+                              40.56361094050406
+                           ],
+                           [
+                              -3.71399968300745,
+                              40.53207956142201
+                           ],
+                           [
+                              -3.729170064410446,
+                              40.51779915427073
+                           ],
+                           [
+                              -3.742375563446283,
+                              40.5171785886919
+                           ]
+                        ]
+                     ]
+                  ]
+               },
+               "type": "geo:json"
+            },
+            {
+               "name": "refWeatherStation",
+               "type": "Text"
             }
          ]
       },
@@ -3260,8 +3808,12 @@
                      [
                         [
                            [
-                              -3.641133206077982,
-                              40.486817054018715
+                              -3.632339007885719,
+                              40.49216301017312
+                           ],
+                           [
+                              -3.648293943702253,
+                              40.497828062761236
                            ],
                            [
                               -3.65240480879299,
@@ -3272,20 +3824,20 @@
                               40.523594075998105
                            ],
                            [
-                              -3.617806313458048,
-                              40.5425339985448
+                              -3.623277520436835,
+                              40.53965557699883
                            ],
                            [
-                              -3.617437701999576,
-                              40.542244818102176
+                              -3.617416729280212,
+                              40.53890738744621
                            ],
                            [
                               -3.617180888459423,
                               40.50137756732371
                            ],
                            [
-                              -3.641133206077982,
-                              40.486817054018715
+                              -3.632339007885719,
+                              40.49216301017312
                            ]
                         ]
                      ]
@@ -3295,8 +3847,7 @@
             },
             {
                "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_camino_nuevo"
+               "type": "Text"
             }
          ]
       },
@@ -3320,32 +3871,28 @@
                      [
                         [
                            [
-                              -3.617437701999576,
-                              40.542244818102176
+                              -3.613270171386603,
+                              40.54285555456945
                            ],
                            [
-                              -3.617806313458048,
-                              40.5425339985448
+                              -3.622214052316088,
+                              40.588036511423574
                            ],
                            [
-                              -3.650764617360756,
-                              40.589719919979906
+                              -3.600189531392599,
+                              40.5805825009137
                            ],
                            [
-                              -3.640059465844864,
-                              40.64620985119925
+                              -3.585116392805961,
+                              40.562309312903466
                            ],
                            [
-                              -3.557128844502794,
-                              40.64620985119925
+                              -3.583036128627153,
+                              40.547286243670754
                            ],
                            [
-                              -3.557128844502794,
-                              40.55108286201675
-                           ],
-                           [
-                              -3.617437701999576,
-                              40.542244818102176
+                              -3.613270171386603,
+                              40.54285555456945
                            ]
                         ]
                      ]
@@ -3355,8 +3902,66 @@
             },
             {
                "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_ctra_burgos"
+               "type": "Text"
+            }
+         ]
+      },
+      {
+         "entity_name": "wa_monovar",
+         "entity_type": "WeatherArea",
+         "schedule": "once",
+         "active": [
+            {
+               "name": "dateModified",
+               "value": "import(now)",
+               "type": "DateTime"
+            }
+         ],
+         "staticAttributes": [
+            {
+               "name": "location",
+               "value": {
+                  "type": "MultiPolygon",
+                  "coordinates": [
+                     [
+                        [
+                           [
+                              -3.694499530641508,
+                              40.462195052719316
+                           ],
+                           [
+                              -3.69456963946923,
+                              40.47005718577704
+                           ],
+                           [
+                              -3.648293943702253,
+                              40.497828062761236
+                           ],
+                           [
+                              -3.632339007885719,
+                              40.49216301017312
+                           ],
+                           [
+                              -3.634606021826135,
+                              40.46166613641176
+                           ],
+                           [
+                              -3.642443025114129,
+                              40.461739743111146
+                           ],
+                           [
+                              -3.694499530641508,
+                              40.462195052719316
+                           ]
+                        ]
+                     ]
+                  ]
+               },
+               "type": "geo:json"
+            },
+            {
+               "name": "refWeatherStation",
+               "type": "Text"
             }
          ]
       },
@@ -3388,16 +3993,12 @@
                               40.53641261996386
                            ],
                            [
-                              -3.6614306366499,
-                              40.57929266634
+                              -3.665187297443719,
+                              40.5619022283021
                            ],
                            [
-                              -3.650764617360756,
-                              40.589719919979906
-                           ],
-                           [
-                              -3.617806313458048,
-                              40.5425339985448
+                              -3.623277520436835,
+                              40.53965557699883
                            ],
                            [
                               -3.653806681979588,
@@ -3411,64 +4012,7 @@
             },
             {
                "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_reyes_catolicos"
-            }
-         ]
-      },
-      {
-         "entity_name": "wa_arroyofresno",
-         "entity_type": "WeatherArea",
-         "schedule": "once",
-         "active": [
-            {
-               "name": "dateModified",
-               "value": "import(now)",
-               "type": "DateTime"
-            }
-         ],
-         "staticAttributes": [
-            {
-               "name": "location",
-               "value": {
-                  "type": "MultiPolygon",
-                  "coordinates": [
-                     [
-                        [
-                           [
-                              -3.812968418063883,
-                              40.41630881129907
-                           ],
-                           [
-                              -3.812968418063883,
-                              40.48772053649365
-                           ],
-                           [
-                              -3.737057935310197,
-                              40.51344662612928
-                           ],
-                           [
-                              -3.699596654275976,
-                              40.465614317835616
-                           ],
-                           [
-                              -3.701813673318954,
-                              40.41630881129907
-                           ],
-                           [
-                              -3.812968418063883,
-                              40.41630881129907
-                           ]
-                        ]
-                     ]
-                  ]
-               },
-               "type": "geo:json"
-            },
-            {
-               "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_arroyofresno"
+               "type": "Text"
             }
          ]
       },
@@ -3496,16 +4040,20 @@
                               40.525769615554275
                            ],
                            [
-                              -3.733498266472473,
-                              40.53603645661743
+                              -3.71399968300745,
+                              40.53207956142201
                            ],
                            [
-                              -3.737769865232943,
-                              40.55415577472348
+                              -3.70905509521184,
+                              40.56361094050406
                            ],
                            [
-                              -3.6614306366499,
-                              40.57929266634
+                              -3.670559112638651,
+                              40.57628685247717
+                           ],
+                           [
+                              -3.665187297443719,
+                              40.5619022283021
                            ],
                            [
                               -3.670693530931649,
@@ -3523,8 +4071,7 @@
             },
             {
                "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_uam"
+               "type": "Text"
             }
          ]
       },
@@ -3579,15 +4126,85 @@
             },
             {
                "name": "refWeatherStation",
-               "type": "Text",
-               "value": "wo_dt"
+               "type": "Text"
+            }
+         ]
+      },
+      {
+         "entity_name": "wa_valconejero",
+         "entity_type": "WeatherArea",
+         "schedule": "once",
+         "active": [
+            {
+               "name": "dateModified",
+               "value": "import(now)",
+               "type": "DateTime"
+            }
+         ],
+         "staticAttributes": [
+            {
+               "name": "location",
+               "value": {
+                  "type": "MultiPolygon",
+                  "coordinates": [
+                     [
+                        [
+                           [
+                              -3.617416729280212,
+                              40.53890738744621
+                           ],
+                           [
+                              -3.623277520436835,
+                              40.53965557699883
+                           ],
+                           [
+                              -3.665187297443719,
+                              40.5619022283021
+                           ],
+                           [
+                              -3.670559112638651,
+                              40.57628685247717
+                           ],
+                           [
+                              -3.663172992562162,
+                              40.595251333398664
+                           ],
+                           [
+                              -3.653489451073159,
+                              40.59384964969732
+                           ],
+                           [
+                              -3.632583876579105,
+                              40.591546089648254
+                           ],
+                           [
+                              -3.622214052316088,
+                              40.588036511423574
+                           ],
+                           [
+                              -3.613270171386603,
+                              40.54285555456945
+                           ],
+                           [
+                              -3.617416729280212,
+                              40.53890738744621
+                           ]
+                        ]
+                     ]
+                  ]
+               },
+               "type": "geo:json"
+            },
+            {
+               "name": "refWeatherStation",
+               "type": "Text"
             }
          ]
       },
       {
          "entity_name": "no_camino_santiago",
          "entity_type": "NoiseObserved",
-         "schedule": "59 */15 * * * *",
+         "schedule": "38 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -3665,7 +4282,7 @@
       {
          "entity_name": "no_san_millan_cogolla",
          "entity_type": "NoiseObserved",
-         "schedule": "40 */15 * * * *",
+         "schedule": "59 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -3743,7 +4360,7 @@
       {
          "entity_name": "no_monasterio",
          "entity_type": "NoiseObserved",
-         "schedule": "6 */15 * * * *",
+         "schedule": "1 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -3821,7 +4438,7 @@
       {
          "entity_name": "no_distrito_telefonica",
          "entity_type": "NoiseObserved",
-         "schedule": "59 */15 * * * *",
+         "schedule": "34 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -3899,7 +4516,7 @@
       {
          "entity_name": "no_felicidad",
          "entity_type": "NoiseObserved",
-         "schedule": "48 */15 * * * *",
+         "schedule": "58 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -3977,7 +4594,7 @@
       {
          "entity_name": "no_azalea",
          "entity_type": "NoiseObserved",
-         "schedule": "37 */15 * * * *",
+         "schedule": "35 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -4055,7 +4672,7 @@
       {
          "entity_name": "no_francisco_gervas",
          "entity_type": "NoiseObserved",
-         "schedule": "9 */15 * * * *",
+         "schedule": "51 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -4133,7 +4750,7 @@
       {
          "entity_name": "no_encinar",
          "entity_type": "NoiseObserved",
-         "schedule": "17 */15 * * * *",
+         "schedule": "54 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
