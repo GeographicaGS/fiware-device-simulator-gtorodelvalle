@@ -4,8 +4,8 @@
    "authentication": "import(auth_config.json)",
    "exports": {
       "now": "date-increment-interpolator({\"origin\": \"now\", \"increment\": 0})",
-      "workDaysSchedule": "29 */15 * * * 1-5",
-      "weekendSchedule": "29 */15 * * * 0,6",
+      "workDaysSchedule": "59 */15 * * * 1-5",
+      "weekendSchedule": "59 */15 * * * 0,6",
       "so2_value_lv": "time-random-linear-interpolator([[0,random(5,10)],[9,random(10,15)],[12,random(60,70)],[14,random(40,50)],[18,random(10,15)],[24,random(5,10)]])",
       "so2_value_sd": "time-random-linear-interpolator([[0,random(4,8)],[9,random(8,12)],[12,random(40,50)],[14,random(30,40)],[18,random(8,12)],[24,random(4,8)]])",
       "no2_value_lv": [
@@ -45,15 +45,15 @@
             "condition": "${{entity_name==^((aq_alcala_zamora|aq_distrito_telefonica)$).*}}"
          }
       ],
-      "springSchedule": "27 */15 * * 4,5 *",
-      "summerSchedule": "27 */15 * * 6-9 *",
-      "autumnSchedule": "27 */15 * * 10,11 *",
-      "winterSchedule": "27 */15 * * 1-3,12 *",
-      "notRainSummerSchedule": "27 0 * * 6-9 *",
-      "notRainNotSummerSchedule": "27 0 * 3-22,25-31 1-5,10-12 *",
-      "rainSchedule": "27 0 * 1,2,23,24 1-5,10-12 *",
+      "springSchedule": "39 */15 * * 4,5 *",
+      "summerSchedule": "39 */15 * * 6-9 *",
+      "autumnSchedule": "39 */15 * * 10,11 *",
+      "winterSchedule": "39 */15 * * 1-3,12 *",
+      "notRainSummerSchedule": "39 */15 * * 6-9 *",
+      "notRainNotSummerSchedule": "39 */15 * 1-4,7-22,25-31 1-5,10-12 *",
+      "rainSchedule": "39 */15 * 5,6,23,24 1-5,10-12 *",
       "precip_value_nrsu": "0",
-      "precip_value_r": "time-random-linear-interpolator([[0,random(0.8,1.2)],[6,random(1,1.4)],[7,random(0,0)],[17,random(0,0)],[18,random(0.7,0.9)],[24,random(1.3,1.5)]])",
+      "precip_value_r": "time-random-linear-interpolator([[0,random(0.25,0.40)],[6,random(0.25,0.4)],[7,random(0,0)],[17,random(0,0)],[18,random(0.3,0.4)],[24,random(0.33,0.45)]])",
       "precip_value_nrnsu": "0",
       "temp_value_sp": "time-random-linear-interpolator([[0,random(10,12)],[6,random(8,10)],[14,random(24,28)],[18,random(18,20)],[22,random(14,16)],[24,random(10,12)]])",
       "temp_value_su": "time-random-linear-interpolator([[0,random(19,21)],[6,random(17,19)],[14,random(30,34)],[18,random(26,30)],[22,random(22,24)],[24,random(19,21)]])",
@@ -65,10 +65,10 @@
       "vbsl_value_nrsu": "text-rotation-interpolator({\"units\": \"hours\", \"text\": [[0,\"poor\"],[6.5,\"good\"],[21,\"poor\"]]})",
       "vbsl_value_nrnsu": "text-rotation-interpolator({\"units\": \"hours\", \"text\": [[0,\"poor\"],[8,\"good\"],[19,\"poor\"]]})",
       "vbsl_value_r": "text-rotation-interpolator({\"units\": \"hours\", \"text\": [[0,\"veryPoor\"],[2,\"veryPoor\"],[7,\"moderate\"],[18,\"veryPoor\"],[21,\"veryPoor\"]]})",
-      "workDaysReducedSchedule": "16 */15 * * * 1-4",
-      "fridaysSchedule": "16 */15 * * * 5",
-      "saturdaysSchedule": "16 */15 * * * 6",
-      "sundaysSchedule": "16 */15 * * * 0",
+      "workDaysReducedSchedule": "38 */15 * * * 1-4",
+      "fridaysSchedule": "38 */15 * * * 5",
+      "saturdaysSchedule": "38 */15 * * * 6",
+      "sundaysSchedule": "38 */15 * * * 0",
       "soundlv_value_lj": [
          {
             "content": "time-random-linear-interpolator([[0,random(52,55)],[5,random(45,48)],[6,random(58,65)],[9,random(62,68)],[12,random(64,66)],[14,random(65,70)],[16,random(55,58)],[18,random(64,68)],[21,random(58,60)],[24,random(54,58)]])",
@@ -109,7 +109,7 @@
       {
          "entity_name": "aq_jaen",
          "entity_type": "AirQualityObserved",
-         "schedule": "34 */15 * * * *",
+         "schedule": "24 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -230,7 +230,7 @@
       {
          "entity_name": "aq_uam",
          "entity_type": "AirQualityObserved",
-         "schedule": "43 */15 * * * *",
+         "schedule": "37 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -351,7 +351,7 @@
       {
          "entity_name": "aq_alonso_quijano",
          "entity_type": "AirQualityObserved",
-         "schedule": "24 */15 * * * *",
+         "schedule": "51 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -472,7 +472,7 @@
       {
          "entity_name": "aq_alcala_zamora",
          "entity_type": "AirQualityObserved",
-         "schedule": "32 */15 * * * *",
+         "schedule": "44 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -593,7 +593,7 @@
       {
          "entity_name": "aq_camino_del_sur",
          "entity_type": "AirQualityObserved",
-         "schedule": "24 */15 * * * *",
+         "schedule": "16 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -714,7 +714,7 @@
       {
          "entity_name": "aq_salvia",
          "entity_type": "AirQualityObserved",
-         "schedule": "38 */15 * * * *",
+         "schedule": "17 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -835,7 +835,7 @@
       {
          "entity_name": "aq_distrito_telefonica",
          "entity_type": "AirQualityObserved",
-         "schedule": "39 */15 * * * *",
+         "schedule": "19 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -956,7 +956,7 @@
       {
          "entity_name": "aq_nevero",
          "entity_type": "AirQualityObserved",
-         "schedule": "17 */15 * * * *",
+         "schedule": "13 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -1077,7 +1077,7 @@
       {
          "entity_name": "aq_aragoneses",
          "entity_type": "AirQualityObserved",
-         "schedule": "4 */15 * * * *",
+         "schedule": "55 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -1198,7 +1198,7 @@
       {
          "entity_name": "aq_ciudad_escolar",
          "entity_type": "AirQualityObserved",
-         "schedule": "29 */15 * * * *",
+         "schedule": "59 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -1319,7 +1319,7 @@
       {
          "entity_name": "wo_monasterio",
          "entity_type": "WeatherObserved",
-         "schedule": "28 */15 * * * *",
+         "schedule": "43 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1451,7 +1451,7 @@
       {
          "entity_name": "wo_dt",
          "entity_type": "WeatherObserved",
-         "schedule": "47 */15 * * * *",
+         "schedule": "32 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1583,7 +1583,7 @@
       {
          "entity_name": "wo_puente_reina",
          "entity_type": "WeatherObserved",
-         "schedule": "8 */15 * * * *",
+         "schedule": "41 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1847,7 +1847,7 @@
       {
          "entity_name": "wo_camino_nuevo",
          "entity_type": "WeatherObserved",
-         "schedule": "49 */15 * * * *",
+         "schedule": "28 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1979,7 +1979,7 @@
       {
          "entity_name": "wo_uam",
          "entity_type": "WeatherObserved",
-         "schedule": "27 */15 * * * *",
+         "schedule": "39 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2443,7 +2443,7 @@
       {
          "entity_name": "no_camino_santiago",
          "entity_type": "NoiseObserved",
-         "schedule": "59 */15 * * * *",
+         "schedule": "54 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -2521,7 +2521,7 @@
       {
          "entity_name": "no_san_millan_cogolla",
          "entity_type": "NoiseObserved",
-         "schedule": "6 */15 * * * *",
+         "schedule": "37 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -2599,7 +2599,7 @@
       {
          "entity_name": "no_monasterio",
          "entity_type": "NoiseObserved",
-         "schedule": "23 */15 * * * *",
+         "schedule": "22 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -2677,7 +2677,7 @@
       {
          "entity_name": "no_distrito_telefonica",
          "entity_type": "NoiseObserved",
-         "schedule": "26 */15 * * * *",
+         "schedule": "42 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -2755,7 +2755,7 @@
       {
          "entity_name": "no_felicidad",
          "entity_type": "NoiseObserved",
-         "schedule": "58 */15 * * * *",
+         "schedule": "27 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -2833,7 +2833,7 @@
       {
          "entity_name": "no_azalea",
          "entity_type": "NoiseObserved",
-         "schedule": "22 */15 * * * *",
+         "schedule": "49 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -2911,7 +2911,7 @@
       {
          "entity_name": "no_francisco_gervas",
          "entity_type": "NoiseObserved",
-         "schedule": "41 */15 * * * *",
+         "schedule": "1 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -2989,7 +2989,7 @@
       {
          "entity_name": "no_encinar",
          "entity_type": "NoiseObserved",
-         "schedule": "16 */15 * * * *",
+         "schedule": "38 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
