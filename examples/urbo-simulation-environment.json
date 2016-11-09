@@ -4,8 +4,8 @@
    "authentication": "import(auth_config.json)",
    "exports": {
       "now": "date-increment-interpolator({\"origin\": \"now\", \"increment\": 0})",
-      "workDaysSchedule": "24 */15 * * * 1-5",
-      "weekendSchedule": "24 */15 * * * 0,6",
+      "workDaysSchedule": "19 */15 * * * 1-5",
+      "weekendSchedule": "19 */15 * * * 0,6",
       "so2_value_lv": "time-random-linear-interpolator([[0,random(5,10)],[9,random(10,15)],[12,random(60,70)],[14,random(40,50)],[18,random(10,15)],[24,random(5,10)]])",
       "so2_value_sd": "time-random-linear-interpolator([[0,random(4,8)],[9,random(8,12)],[12,random(40,50)],[14,random(30,40)],[18,random(8,12)],[24,random(4,8)]])",
       "no2_value_lv": [
@@ -45,13 +45,13 @@
             "condition": "${{entity_name==^((aq_alcala_zamora|aq_distrito_telefonica)$).*}}"
          }
       ],
-      "springSchedule": "43 */15 * * 4,5 *",
-      "summerSchedule": "43 */15 * * 6-9 *",
-      "autumnSchedule": "43 */15 * * 10,11 *",
-      "winterSchedule": "43 */15 * * 1-3,12 *",
-      "notRainSummerSchedule": "43 */15 * * 6-9 *",
-      "notRainNotSummerSchedule": "43 */15 * 1-4,7-22,25-31 1-5,10-12 *",
-      "rainSchedule": "43 */15 * 5,6,23,24 1-5,10-12 *",
+      "springSchedule": "10 */15 * * 4,5 *",
+      "summerSchedule": "10 */15 * * 6-9 *",
+      "autumnSchedule": "10 */15 * * 10,11 *",
+      "winterSchedule": "10 */15 * * 1-3,12 *",
+      "notRainSummerSchedule": "10 */15 * * 6-9 *",
+      "notRainNotSummerSchedule": "10 */15 * 1-4,7-22,25-31 1-5,10-12 *",
+      "rainSchedule": "10 */15 * 5,6,23,24 1-5,10-12 *",
       "precip_value_nrsu": "0",
       "precip_value_r": "time-random-linear-interpolator([[0,random(0.25,0.40)],[6,random(0.25,0.4)],[7,random(0,0)],[17,random(0,0)],[18,random(0.3,0.4)],[24,random(0.33,0.45)]])",
       "precip_value_nrnsu": "0",
@@ -65,10 +65,10 @@
       "vbsl_value_nrsu": "text-rotation-interpolator({\"units\": \"hours\", \"text\": [[0,\"poor\"],[6.5,\"good\"],[21,\"poor\"]]})",
       "vbsl_value_nrnsu": "text-rotation-interpolator({\"units\": \"hours\", \"text\": [[0,\"poor\"],[8,\"good\"],[19,\"poor\"]]})",
       "vbsl_value_r": "text-rotation-interpolator({\"units\": \"hours\", \"text\": [[0,\"veryPoor\"],[2,\"veryPoor\"],[7,\"moderate\"],[18,\"veryPoor\"],[21,\"veryPoor\"]]})",
-      "workDaysReducedSchedule": "6 */15 * * * 1-4",
-      "fridaysSchedule": "6 */15 * * * 5",
-      "saturdaysSchedule": "6 */15 * * * 6",
-      "sundaysSchedule": "6 */15 * * * 0",
+      "workDaysReducedSchedule": "12 */15 * * * 1-4",
+      "fridaysSchedule": "12 */15 * * * 5",
+      "saturdaysSchedule": "12 */15 * * * 6",
+      "sundaysSchedule": "12 */15 * * * 0",
       "soundlv_value_lj": [
          {
             "content": "time-random-linear-interpolator([[0,random(52,55)],[5,random(45,48)],[6,random(58,65)],[9,random(62,68)],[12,random(64,66)],[14,random(65,70)],[16,random(55,58)],[18,random(64,68)],[21,random(58,60)],[24,random(54,58)]])",
@@ -109,7 +109,7 @@
       {
          "entity_name": "aq_jaen",
          "entity_type": "AirQualityObserved",
-         "schedule": "13 */15 * * * *",
+         "schedule": "45 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -230,7 +230,7 @@
       {
          "entity_name": "aq_uam",
          "entity_type": "AirQualityObserved",
-         "schedule": "48 */15 * * * *",
+         "schedule": "9 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -351,7 +351,7 @@
       {
          "entity_name": "aq_alonso_quijano",
          "entity_type": "AirQualityObserved",
-         "schedule": "7 */15 * * * *",
+         "schedule": "19 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -472,7 +472,7 @@
       {
          "entity_name": "aq_alcala_zamora",
          "entity_type": "AirQualityObserved",
-         "schedule": "45 */15 * * * *",
+         "schedule": "7 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -593,7 +593,7 @@
       {
          "entity_name": "aq_camino_del_sur",
          "entity_type": "AirQualityObserved",
-         "schedule": "46 */15 * * * *",
+         "schedule": "24 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -714,7 +714,7 @@
       {
          "entity_name": "aq_salvia",
          "entity_type": "AirQualityObserved",
-         "schedule": "6 */15 * * * *",
+         "schedule": "39 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -835,7 +835,7 @@
       {
          "entity_name": "aq_distrito_telefonica",
          "entity_type": "AirQualityObserved",
-         "schedule": "53 */15 * * * *",
+         "schedule": "2 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -956,7 +956,7 @@
       {
          "entity_name": "aq_nevero",
          "entity_type": "AirQualityObserved",
-         "schedule": "39 */15 * * * *",
+         "schedule": "54 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -1077,7 +1077,7 @@
       {
          "entity_name": "aq_aragoneses",
          "entity_type": "AirQualityObserved",
-         "schedule": "39 */15 * * * *",
+         "schedule": "57 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -1198,7 +1198,7 @@
       {
          "entity_name": "aq_ciudad_escolar",
          "entity_type": "AirQualityObserved",
-         "schedule": "24 */15 * * * *",
+         "schedule": "19 */15 * * * *",
          "active": [
             {
                "name": "SO2",
@@ -1319,7 +1319,7 @@
       {
          "entity_name": "wo_monasterio",
          "entity_type": "WeatherObserved",
-         "schedule": "55 */15 * * * *",
+         "schedule": "24 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1451,7 +1451,7 @@
       {
          "entity_name": "wo_dt",
          "entity_type": "WeatherObserved",
-         "schedule": "27 */15 * * * *",
+         "schedule": "44 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1583,7 +1583,7 @@
       {
          "entity_name": "wo_puente_reina",
          "entity_type": "WeatherObserved",
-         "schedule": "34 */15 * * * *",
+         "schedule": "45 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1715,7 +1715,7 @@
       {
          "entity_name": "wo_reyes_catolicos",
          "entity_type": "WeatherObserved",
-         "schedule": "24 */15 * * * *",
+         "schedule": "39 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1847,7 +1847,7 @@
       {
          "entity_name": "wo_camino_nuevo",
          "entity_type": "WeatherObserved",
-         "schedule": "7 */15 * * * *",
+         "schedule": "42 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -1979,7 +1979,7 @@
       {
          "entity_name": "wo_uam",
          "entity_type": "WeatherObserved",
-         "schedule": "48 */15 * * * *",
+         "schedule": "38 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2111,7 +2111,7 @@
       {
          "entity_name": "wo_el_pardo_01",
          "entity_type": "WeatherObserved",
-         "schedule": "52 */15 * * * *",
+         "schedule": "48 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2243,7 +2243,7 @@
       {
          "entity_name": "wo_rosalia_de_castro",
          "entity_type": "WeatherObserved",
-         "schedule": "53 */15 * * * *",
+         "schedule": "22 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2375,7 +2375,7 @@
       {
          "entity_name": "wo_almenara",
          "entity_type": "WeatherObserved",
-         "schedule": "48 */15 * * * *",
+         "schedule": "7 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2507,7 +2507,7 @@
       {
          "entity_name": "wo_ctra_burgos",
          "entity_type": "WeatherObserved",
-         "schedule": "31 */15 * * * *",
+         "schedule": "47 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2639,7 +2639,7 @@
       {
          "entity_name": "wo_el_alto",
          "entity_type": "WeatherObserved",
-         "schedule": "14 */15 * * * *",
+         "schedule": "30 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2771,7 +2771,7 @@
       {
          "entity_name": "wo_ariadna",
          "entity_type": "WeatherObserved",
-         "schedule": "18 */15 * * * *",
+         "schedule": "49 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -2903,7 +2903,7 @@
       {
          "entity_name": "wo_valconejero",
          "entity_type": "WeatherObserved",
-         "schedule": "5 */15 * * * *",
+         "schedule": "24 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -3035,7 +3035,7 @@
       {
          "entity_name": "wo_el_pardo_02",
          "entity_type": "WeatherObserved",
-         "schedule": "14 */15 * * * *",
+         "schedule": "1 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -3167,7 +3167,7 @@
       {
          "entity_name": "wo_monovar",
          "entity_type": "WeatherObserved",
-         "schedule": "43 */15 * * * *",
+         "schedule": "10 */15 * * * *",
          "active": [
             {
                "name": "precipitation",
@@ -3692,12 +3692,16 @@
                               40.56361094050406
                            ],
                            [
-                              -3.758090871413507,
-                              40.573923971672244
+                              -3.745058019929996,
+                              40.58683849208285
                            ],
                            [
-                              -3.746668309627233,
-                              40.586198222102134
+                              -3.745058019929993,
+                              40.586838492082826
+                           ],
+                           [
+                              -3.742948142273894,
+                              40.58767740406764
                            ],
                            [
                               -3.717131482020309,
@@ -3756,8 +3760,8 @@
                               40.5171785886919
                            ],
                            [
-                              -3.775466382574229,
-                              40.55525290826943
+                              -3.768857628283431,
+                              40.562354424261436
                            ],
                            [
                               -3.746668309627233,
@@ -4219,7 +4223,7 @@
       {
          "entity_name": "no_camino_santiago",
          "entity_type": "NoiseObserved",
-         "schedule": "37 */15 * * * *",
+         "schedule": "39 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -4297,7 +4301,7 @@
       {
          "entity_name": "no_san_millan_cogolla",
          "entity_type": "NoiseObserved",
-         "schedule": "18 */15 * * * *",
+         "schedule": "43 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -4375,7 +4379,7 @@
       {
          "entity_name": "no_monasterio",
          "entity_type": "NoiseObserved",
-         "schedule": "8 */15 * * * *",
+         "schedule": "3 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -4531,7 +4535,7 @@
       {
          "entity_name": "no_felicidad",
          "entity_type": "NoiseObserved",
-         "schedule": "22 */15 * * * *",
+         "schedule": "31 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -4609,7 +4613,7 @@
       {
          "entity_name": "no_azalea",
          "entity_type": "NoiseObserved",
-         "schedule": "3 */15 * * * *",
+         "schedule": "58 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -4687,7 +4691,7 @@
       {
          "entity_name": "no_francisco_gervas",
          "entity_type": "NoiseObserved",
-         "schedule": "37 */15 * * * *",
+         "schedule": "28 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
@@ -4765,7 +4769,7 @@
       {
          "entity_name": "no_encinar",
          "entity_type": "NoiseObserved",
-         "schedule": "6 */15 * * * *",
+         "schedule": "12 */15 * * * *",
          "active": [
             {
                "name": "instantSoundLevel",
